@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: employee-pod
+  labels:
+    app: employee
+
+spec:
+  containers:
+  - name: employee-container
+    image: employee-service:v1
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 8081
