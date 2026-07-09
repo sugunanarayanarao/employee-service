@@ -1,11 +1,12 @@
+from typing import List
+
 from fastapi import APIRouter
 from .models import Employee
 
 router = APIRouter()
 
-@router.get("/employees", response_model=list[Employee])
+@router.get("/employees", response_model=List[Employee])
 def get_employees():
-
     return [
         Employee(id=1, name="John", department="IT"),
         Employee(id=2, name="Alice", department="HR"),
