@@ -29,6 +29,6 @@ COPY --from=builder /build/dist/*.whl .
 # Install the wheel
 RUN pip install --no-cache-dir *.whl
 
-EXPOSE 8080
+EXPOSE 8081
 
 CMD ["uvicorn", "employee_service.main:app", "--host", "0.0.0.0", "--port", "8081"]
